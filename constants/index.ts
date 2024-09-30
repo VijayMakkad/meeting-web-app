@@ -21,7 +21,7 @@ export const siderbarLinks=[
         },
         {
             imgUrl:'/icons/add-personal.svg',
-            route:'/presonal-room',
+            route:'/personal-room',
             label:'Personal Room',
         }
 ]

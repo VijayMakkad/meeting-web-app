@@ -8,12 +8,16 @@ import React from "react";
 
 const Sidebar = () => {
   const pathName = usePathname();
+
   return (
     <section className="sticky left-0 top-0 flex h-screen w-fit flex-col justify-between bg-dark-1 p-6 pt-28 text-white max-md:hidden lg:w-[264px]">
-      <div className="flex flex- flex-col gap-6">
+      <div className="flex flex-1 flex-col gap-6">
         {siderbarLinks.map((link) => {
-          const isActive =
-            pathName === link.route || pathName.startsWith(link.route);
+          const isHome = link.route === "/";
+          const isActive = isHome
+            ? pathName === link.route // Exact match for home
+            : pathName.startsWith(link.route); // Match any route that starts with link.route
+
           return (
             <Link
               href={link.route}
