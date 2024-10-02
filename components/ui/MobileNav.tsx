@@ -49,7 +49,7 @@ const MobileNav = () => {
                   : pathName.startsWith(link.route); // Match any route that starts with link.route
 
                 return (
-                  <SheetClose asChild key={link.route}>
+                  <SheetClose asChild key={link.route} >
                     <Link
                       href={link.route}
                       className={cn(
