@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import React, { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "GG Meet",
+  title: "Makkad Meet",
   description: "Video Calling app",
   icons:{
     icon:'/icons/logo.svg'
